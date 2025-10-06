@@ -473,7 +473,7 @@ int main(int argc, char* argv[])
 
 		char* szFileData = new char[nFileSize + 1];
 
-		int bytesRead = fread(szFileData, sizeof(szFileData[0]), nFileSize, pFile);
+		unsigned int bytesRead = static_cast<unsigned int>(fread(szFileData, sizeof(szFileData[0]), nFileSize, pFile));
 		fclose(pFile);
 		nFileSize = bytesRead;
 

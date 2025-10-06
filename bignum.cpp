@@ -488,7 +488,7 @@ CBigNum CBigNum::FromHexString(const char* szIn)
 	unsigned int nUseLength;
 	unsigned int nPlaceVal;
 
-	nUseLength = strlen(szIn);
+	nUseLength = static_cast<unsigned int>(strlen(szIn));
 
 	Result.m_nSize = (nUseLength + 3) >> 2;
 	Result.m_arVal = new unsigned int[Result.m_nSize];
@@ -531,7 +531,7 @@ CBigNum CBigNum::FromBase64String(const char* szIn)
 	}
 	szCharMap['='] = 0;
 
-	nUseLength = strlen(szIn);
+	nUseLength = static_cast<unsigned int>(strlen(szIn));
 	nByteCount = (nUseLength / 4) * 3;
 
 	Result.Resize((nByteCount + 1) / 2);
