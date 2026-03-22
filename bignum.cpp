@@ -1,4 +1,4 @@
-// BigNum.cpp: implementation of the CBigNum class.
+﻿// BigNum.cpp: implementation of the CBigNum class.
 //
 //////////////////////////////////////////////////////////////////////
 
